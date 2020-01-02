@@ -1,3 +1,12 @@
+Pour Anto : 
+J'ai pris quelques libertés avec le sujet : j'ai créé 3 rôles utilisateurs :
+ - Admin = il a accès à tous les CRUD (canards, races, utilisateurs et roles)
+ - Breeder = il peut voir, créer et modifier des canards et voir les races de canards 
+ - Client = il peut seulement voir les canards et les races de canards
+
+<a href="https://youtu.be/f5d8pVg3Qtg">Si tu as besoin de loler avant de corriger, clique ici</a>
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
