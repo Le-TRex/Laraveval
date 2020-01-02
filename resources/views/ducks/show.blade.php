@@ -22,7 +22,7 @@
                 <td>{{ $duck->breed->mainColor }}</td>
 
                 @if(Auth::check())
-                    @if(Auth::user()->role=='admin' || Auth::user()->role=='breeder')
+                    @if(Auth::user()->role->name=='admin' || Auth::user()->role->name=='breeder')
                         <td>
                             <form action="{{ route ('editDuck', $duck->id)}}" method="POST">
                                 @csrf
@@ -30,7 +30,7 @@
                             </form>
                         </td>
                     @endif
-                    @if(Auth::user()->role=='admin')
+                    @if(Auth::user()->role->name=='admin')
                         <td>
                         <form action="{{ route('deleteDuck', $duck->id) }}" method="POST">
                             @csrf

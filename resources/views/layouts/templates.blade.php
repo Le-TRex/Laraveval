@@ -25,36 +25,63 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <a class="btn btn-secondary" href="{{ route('home') }}" role="button">Accueil</a>
-                        
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canards</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ route('ducks') }}">Voir les Canards</a>                                
-                                @if(Auth::check())
-                                    @if(Auth::user()->role=='admin' || Auth::user()->role=='breeder')
-                                        {{-- Ajout canards réservé aux rôles breedr et admin --}}
-                                        <a class="dropdown-item" href="{{ route('createDuck') }}">Ajouter un canard</a>
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
+                            <a class="btn btn-secondary" href="{{ route('home') }}" role="button">Accueil</a>
+                            
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canards</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ route('ducks') }}">Voir les Canards</a>                                
+                                    @if(Auth::check())
+                                        @if(Auth::user()->role->name=='admin' || Auth::user()->role->name=='breeder')
+                                            {{-- Ajout canards réservé aux rôles breedr et admin --}}
+                                            <a class="dropdown-item" href="{{ route('createDuck') }}">Ajouter un canard</a>
+                                        @endif
                                     @endif
-                                @endif
+                                </div>
                             </div>
-                        </div>
-                        
+                    @if(Auth::check())
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Races</button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="{{ route('breeds') }}">Voir les races</a>
                                 @if(Auth::check())
-                                    @if(Auth::user()->role=='admin')
+                                    @if(Auth::user()->role->name=='admin')
                                         {{-- Ajout races réservé au rôle admin --}}
                                         <a class="dropdown-item" href="{{ route('createBreed') }}">Ajouter une race</a>
                                     @endif
                                 @endif
                             </div>
                         </div>
-                    </ul>
+
+                        {{-- Accès CRUD users réservé au rôle admin --}}
+                        @if(Auth::check())
+                            @if(Auth::user()->role->name=='admin')
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilisateurs</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="{{ route('users') }}">Voir les utilisateurs</a>
+                                        <a class="dropdown-item" href="{{ route('createUser') }}">Ajouter un utilisateur</a>
+                                    </div>
+                                </div>
+                            @endif
+                        @endif
+
+                        {{-- Accès CRUD roles réservé au rôle admin --}}
+                        @if(Auth::check())
+                            @if(Auth::user()->role->name=='admin')
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rôles</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="{{ route('roles') }}">Voir les rôles</a>
+                                        <a class="dropdown-item" href="{{ route('createRole') }}">Ajouter un rôle</a>
+                                    </div>
+                                </div>
+                            @endif
+                        @endif
+                        </ul>
+                    @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

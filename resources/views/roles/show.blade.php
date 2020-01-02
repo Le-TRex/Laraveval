@@ -7,23 +7,21 @@
         <tr>
             <th>ID</th>
             <th>Nom</th>
-            <th>Couleur Principale</th>
         </tr>
-        @foreach($breeds as $breed)
+        @foreach($roles as $role)
             <tr>
-                <td>{{ $breed->id }}</td>
-                <td>{{ $breed->name }}</td>
-                <td>{{ $breed->mainColor }}</td>
+                <td>{{ $role->id }}</td>
+                <td>{{ $role->name }}</td>
                 @if(Auth::check())
-                    @if(Auth::user()->role->name=='admin')
+                    @if(Auth::user()->role->name =='admin')
                         <td>
-                            <form action="{{ route ('editBreed', $breed->id)}}" method="POST">
+                            <form action="{{ route ('editRole', $role->id)}}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-primary">Modifier</button>
                             </form>
                         </td>
                         <td>
-                        <form action="{{ route('deleteBreed', $breed->id) }}" method="POST">
+                        <form action="{{ route('deleteRole', $role->id) }}" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-primary">Supprimer</button>
                         </form>

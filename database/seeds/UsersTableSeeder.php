@@ -15,21 +15,21 @@ class UsersTableSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin.fr',
             'password' => bcrypt('admin1234'),
-            'role' => 'admin'
+            'role_id' => 1
         ]);
 
         DB::table('users')->insert([
             'name' => 'Camille',
             'email' => 'camille@duck.fr',
             'password' => bcrypt('camille1234'),
-            'role' => 'breeder'
+            'role_id' => 2
         ]);
 
         DB::table('users')->insert([
             'name' => 'Alex',
             'email' => 'alex@duck.fr',
             'password' => bcrypt('alex1234'),
-            'role' => 'client'
+            'role_id' => 3
         ]);
     }
 }
