@@ -1,0 +1,133 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+*:hover {
+    cursor: url('../images/cat.gif');
+}
+
+.navbar{
+    color: #F2BF91;
+    background-color: #591225 !important;
+}
+
+a {
+    color: #F2BF91 !important;
+}
+
+a:hover{
+    cursor: url('../images/cat.gif');
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    background-color: #591225 !important;
+    color: #F2BF91;
+    border-color: #F2BF91;
+}
+
+.btn-secondary:hover{
+    color: white !important;
+    border-color: #8C2B2B;
+    box-shadow: none !important;
+    cursor: url('../images/cat.gif') !important;
+}
+
+.dropdown-menu {
+    background-color: #591225 !important;
+}
+
+.dropdown-menu:hover {
+    border-color: #8C2B2B;
+    box-shadow: none !important;
+    cursor: url('../images/cat.gif') !important;
+}
+
+.dropdown-item:hover{
+    background-color: #591225;
+    text-decoration: underline;
+    cursor: url('../images/cat.gif') !important;
+}
+
+.navbar-toggler {
+    color: #F2BF91 !important;
+}
+
+.dropdown-menu-right {
+    background-color: #591225 !important;
+    border-color: #F2BF91;
+}
+
+.dropdown-menu-right a:hover{
+    background-color: #591225 !important;
+    text-decoration: underline;
+    cursor: url('../images/cat.gif') !important;
+}
+
+main {
+    height: 88vh;
+    padding: 0;
+    background-image: url('../images/background.jpg');
+    display: flex;
+}
+
+#welcome {
+    margin: auto;
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    border: solid #F2BF91 2px;
+    background-color: #591225;
+    color: #F2BF91;
+    font-size: 1.6em;
+}
+
+#inMain {
+    margin: auto;
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    border: solid #F2BF91 2px;
+    display: flex;
+    background-color: #591225;
+    color: #F2BF91;
+}
+
+table {
+    margin: auto;
+    color: #F2BF91 !important;
+}
+
+th, td{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btn-primary {
+    background-color: #591225 !important;
+    color: #F2BF91;
+    border-color: #F2BF91;
+}
+
+.btn-primary:hover, .btn-primary:active{
+    border: #8C2B2B;
+}
+
+.card-header, .card-body {
+    background-color: #591225 !important;
+    color: #F2BF91 !important;
+}
+
+footer {
+    text-align: center;
+    height: 6vh;
+    line-height: 6vh;
+    color: #F2BF91;
+    font-weight: bold;
+    background-color: #591225;
+}
