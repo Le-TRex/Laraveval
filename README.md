@@ -4,6 +4,12 @@ J'ai pris quelques libertés avec le sujet : j'ai créé 3 rôles utilisateurs :
  - Breeder = il peut voir, créer et modifier des canards et voir les races de canards 
  - Client = il peut seulement voir les canards et les races de canards
 
+Identifiants :
+ - Admin : admin@admin.fr admin134
+ - Breeder : camille@duck.fr camille1234
+ - Client : alex@duck.fr alex1234
+
+
 <a href="https://youtu.be/f5d8pVg3Qtg">Si tu as besoin de loler avant de corriger, clique ici</a>
 
 
