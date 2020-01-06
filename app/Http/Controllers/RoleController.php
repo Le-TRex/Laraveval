@@ -14,6 +14,11 @@ class RoleController extends Controller
         return view('roles.show', compact('roles'));
     }
 
+    public function create()
+    {
+        return view ('roles.create');
+    }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(),[
